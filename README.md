@@ -1,0 +1,1 @@
+# StateMapper for Redux
