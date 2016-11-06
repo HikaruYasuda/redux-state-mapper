@@ -1,7 +1,12 @@
 {
-  "name": "redux-state-mapper",
+  "name": "flux-state-mapper",
   "version": "1.0.0",
-  "description": "",
+  "description": "State mapper that map the action types to reducers for Flux",
+  "keywords": [
+    "flux",
+    "redux",
+    "reducer"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "mocha",
