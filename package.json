@@ -4,12 +4,17 @@
   "description": "State mapper that map the action types to reducers for Redux",
   "keywords": [
     "redux",
+    "state",
     "reducer"
   ],
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "build": "babel -o index.js src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HikaruYasuda/redux-state-mapper.git"
   },
   "author": "",
   "license": "MIT",
