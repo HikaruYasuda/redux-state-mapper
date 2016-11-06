@@ -6,7 +6,7 @@ var undefined = void 0;
 
 describe('Check initialState', function() {
   it('stateMapperは関数を返す', function() {
-    should.deepEqual(typeof stateMapper(), 'function');
+    should.deepEqual(typeof stateMapper(0), 'function');
   });
   it('prevStateがundefinedの時,ReducerはデフォルトでinitialStateを返す', function() {
     var prevState = undefined, action = {type: 'ACTION'};
@@ -20,32 +20,28 @@ describe('Check initialState', function() {
       should.deepEqual(reducer(prevState, action), initialState);
     })
   });
-  it('prevStateがundefinedの時,initialStateがないならReducerはデフォルトでundefinedを返す', function() {
-    var prevState = undefined, action = {type: 'ACTION'};
-    var reducer = stateMapper();
-    should.deepEqual(reducer(prevState, action), undefined);
-  });
 });
+
 describe('Check when', function() {
   it('whenの最後の引数が関数でない場合エラーになる', function() {
     should.throws(function() {
-      stateMapper().when();
+      stateMapper(0).when();
     }, Error);
     should.throws(function() {
-      stateMapper().when('ACTION');
+      stateMapper(0).when('ACTION');
     }, Error);
     should.throws(function() {
-      stateMapper().when({'call': function(){}, 'a': '1'});
+      stateMapper(0).when({'call': function(){}, 'a': '1'});
     }, Error);
   });
   it('whenにアクションタイプがない場合エラーになる', function() {
     should.throws(function() {
-      stateMapper().when(function(state, action) {
+      stateMapper(0).when(function(state, action) {
         return action.data;
       });
     }, Error)
   });
-  it('いづれかのアクションタイプが一致する関数が実行される', function() {
+  it('アクションタイプが一致する関数が実行される', function() {
     var reducer = stateMapper('not called')
       .when('ACTION_A', 'ACTION_B', function() {
         return 'called 1';

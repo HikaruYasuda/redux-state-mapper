@@ -1,16 +1,15 @@
 {
-  "name": "flux-state-mapper",
+  "name": "redux-state-mapper",
   "version": "1.0.0",
-  "description": "State mapper that map the action types to reducers for Flux",
+  "description": "State mapper that map the action types to reducers for Redux",
   "keywords": [
-    "flux",
     "redux",
     "reducer"
   ],
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "build": "babel -o index.js es/index.js"
+    "build": "babel -o index.js src/index.js"
   },
   "author": "",
   "license": "MIT",
