@@ -4,7 +4,7 @@ State mapper that map the action types to reducers for Redux
 
 ## Installation
 
-`npm install --save-dev redux-state-mapper`
+`npm install --save redux-state-mapper`
 
 ## Usage
 
