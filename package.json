@@ -1,6 +1,6 @@
 {
   "name": "redux-state-mapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "State mapper that map the action types to reducers for Redux",
   "keywords": [
     "redux",
