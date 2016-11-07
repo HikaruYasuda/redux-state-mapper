@@ -2,17 +2,17 @@
 
 const toArray = Array.prototype.slice
 
-class Mapper {
-  constructor(initialState) {
-    this.cases = {}
-    this.initialState = initialState
-  }
-  reduce(args) {
+const Mapper = function(initialState) {
+  this.cases = {}
+  this.initialState = initialState
+}
+Mapper.prototype = {
+  reduce: function(args) {
     typeof args[0] === 'undefined' && (args[0] = this.initialState)
     const fn = this.cases[(args[1] && args[1].type) || '']
     return fn ? fn.apply(this, args) : args[0]
-  }
-  append(args) {
+  },
+  append: function(args) {
     const fn = args.pop()
     if (typeof fn != 'function') throw new Error(`The last argument must be a function, but it was ${typeof fn}`)
     if (args.length == 0) throw new Error('One or more of the action types is required')
