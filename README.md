@@ -9,7 +9,7 @@ State mapper that map the action types to reducers for Redux
 ## Usage
 
 ```javascript
-import stateMapper from 'stateMapper'
+import stateMapper from 'redux-state-mapper'
 
 const reducer = stateMapper(initialState)
   .when('REQUEST_ACTION', ({ data }, { query }) => ({ query, data }))
