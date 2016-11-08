@@ -36,7 +36,7 @@ const reducer = (state = initialState, action) => {
 
 ```javascript
 import {combineReducers} from 'redux'
-import stateMapper from 'stateMapper'
+import stateMapper from 'redux-state-mapper'
 import {
   CHANGE_LOGIN_PARAMS,
   SUCCESS_LOGIN,
