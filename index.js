@@ -72,3 +72,4 @@ function stateMapper(initialState) {
 }
 
 exports.default = stateMapper;
+module.exports = exports.default;

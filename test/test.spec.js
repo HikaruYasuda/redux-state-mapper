@@ -1,7 +1,7 @@
 var should = require('should');
 var it = require('mocha').it;
 var describe = require('mocha').describe;
-var stateMapper = require('../index').default;
+var stateMapper = require('../index');
 var undefined = void 0;
 
 describe('Check initialState', function() {

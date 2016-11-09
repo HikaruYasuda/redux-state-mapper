@@ -28,10 +28,5 @@
     "LICENSE",
     "README.md",
     "index.js"
-  ],
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  }
+  ]
 }
