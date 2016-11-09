@@ -52,7 +52,7 @@ Mapper.prototype = {
  * }
  * </pre>
  * @param {*} initialState
- * @returns {function(state, action)|{when: function(...string, function(state, action))}}
+ * @returns {function(state: object, action: object)|{when: function(...string|Symbol, function(state: object, action: object))}}
  */
 function stateMapper(initialState) {
   var mapper = new Mapper(initialState);
@@ -64,7 +64,7 @@ function stateMapper(initialState) {
   function reducer(state, action) {
     return mapper.reduce(toArray.call(arguments));
   }
-  reducer.when = function (actionType /* , ...actionTypes, calculator */) {
+  reducer.when = function (actionType /* , ...actionTypes, reducer */) {
     mapper.append(toArray.call(arguments));
     return this;
   };
